@@ -32,7 +32,7 @@
         </head>
 
         <body>
-            <div id="wrapper">
+             <div id="wrapper">
                 <!-- Navigation -->
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,7 +64,7 @@
                             </li>
                     
                             <li>
-                                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
                                         <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
@@ -96,6 +96,12 @@
                                     <p class="lead"><?php ?></p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="page-header">Investment Balance</h2>
+                                    <p class="lead"><?php ?></p>
+                                </div>
+                            </div>
 
                             <ol class="breadcrumb">
                                 <li class="active">
@@ -104,7 +110,7 @@
                             </ol>
                         </div>
                     </div>
-
+                </div>
         </body>
 
     </html>
