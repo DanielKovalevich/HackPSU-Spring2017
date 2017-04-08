@@ -1,0 +1,21 @@
+.divCentering {
+ margin: auto;
+  width: 1150px;
+font-size: 25px;
+}
+
+
+.col1 {
+ margin: auto;
+  width: 675px;
+font-size: 25px;
+font-weight: bold;
+}
+
+.col2 {
+ margin: auto;
+  width: 850px;
+font-size: 25px;
+font-weight: bold;
+}
+
