@@ -1,5 +1,6 @@
     <html lang="en">
 
+
         <head>
 
             <meta charset="utf-8">
@@ -32,7 +33,7 @@
         </head>
 
         <body>
-            <div id="wrapper">
+             <div id="wrapper">
                 <!-- Navigation -->
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,10 +68,10 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
-                                        <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
+                                        <a href="/invest_dash_controller.php">Investment Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Item</a>
+                                        <a href="#">Investment Tools</a>
                                     </li>
                                 </ul>
                             </li>
@@ -93,6 +94,16 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h2 class="page-header">Account Balance</h2>
+                                    <p class="lead">
+                                    <?php 
+
+                                    ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="page-header">Investment Balance</h2>
                                     <p class="lead"><?php ?></p>
                                 </div>
                             </div>
@@ -104,7 +115,7 @@
                             </ol>
                         </div>
                     </div>
-
+                </div>
         </body>
 
     </html>
