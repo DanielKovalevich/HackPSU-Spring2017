@@ -17,5 +17,6 @@ function createAccountBalanceChart($dataSet, $legend, $colors) {
 	$lineChart->addBackgroundFill('bg', 'EFEFEF');
 	$lineChart->addBackgroundFill('c', '000000');
 
+	print_r($lineChart->getUrl());
 	return $lineChart;
 }

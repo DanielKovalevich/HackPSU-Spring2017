@@ -1,3 +1,7 @@
+<?php
+include('php/graphs.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +35,37 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        //Hardcoded for now.. 
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Balance', 'Reward'],
+          ['2014',  1000,      400],
+          ['2015',  1170,      460],
+          ['2016',  660,       1120],
+          ['2017',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Account Balances',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart-body'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+
+
 
 </head>
 
@@ -161,7 +196,9 @@
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-area-chart"></div>
+                                <div id="chart-body" style="width: 1000px; height: 300px">
+                                    <!--Chart spawned in by JS!-->
+                                </div>
                             </div>
                         </div>
                     </div>
