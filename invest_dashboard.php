@@ -61,7 +61,7 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
                             <li class="active">
-                                <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                                <a href="home.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                     
                             <li>
@@ -107,12 +107,6 @@
                                     <p class="lead"><?php ?></p>
                                 </div>
                             </div>
-
-                            <ol class="breadcrumb">
-                                <li class="active">
-                                    <i class="fa fa-dashboard"></i> Investment Dashboard
-                                </li>
-                            </ol>
                         </div>
                     </div>
                 </div>
