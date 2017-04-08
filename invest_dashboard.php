@@ -1,4 +1,3 @@
-<!DOCTYPE html>
     <html lang="en">
 
         <head>
@@ -48,9 +47,6 @@
                                     <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                                </li>
-                                <li>
                                     <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
                                 </li>
                                 <li class="divider"></li>
@@ -71,7 +67,7 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
-                                        <a href="invest_dashboard.html">Investment Dashboard</a>
+                                        <a href="/invest_dash_controller.php">Investment Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="#">Dropdown Item</a>
@@ -93,6 +89,14 @@
                             <h1 class="page-header">
                                Investment Dashboard <small>Statistics Overview</small>
                             </h1>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="page-header">Account Balance</h2>
+                                    <p class="lead"><?php ?></p>
+                                </div>
+                            </div>
+
                             <ol class="breadcrumb">
                                 <li class="active">
                                     <i class="fa fa-dashboard"></i> Investment Dashboard
