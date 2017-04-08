@@ -2,8 +2,6 @@
 session_start();
 include("connection.php");
 
-if(isset($_POST["submit"]))
-{
 	if(empty($_POST["username"]) || empty($_POST["password"]))
 	{
 		$error = "Both fields are required";
@@ -27,5 +25,5 @@ if(isset($_POST["submit"]))
 			print("Well, fuck");
 		}
 
-	}
+	
 }
