@@ -6,7 +6,7 @@ class Curl{
     private $json_array = "";
     private $url = "";
 
-    function __construct($url) {
+    public function setURL($url) {
         $this->$url = $url;
     }
 
