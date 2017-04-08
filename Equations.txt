@@ -1,0 +1,32 @@
+FV = Future Value
+PV = Present Value
+Pmt = Payment
+N = Number of Periods
+i = Interest Rate
+
+
+
+
+Future Value with Continuous Investment
+
+FV = Pmt*(((1+i)^N-1)/i)
+
+
+
+
+Future Value with Single Investment
+
+FV = Pmt*(1+i)^N
+
+
+
+
+Present Value of Desired Future Sum
+
+PV = FV/(1+i)^N
+
+
+
+Continuous Payment Required to Achieve Future Sum
+
+Pmt = FV/(((1+i)^N-1)/i)
