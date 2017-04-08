@@ -3,7 +3,7 @@
     include("curl.php");
     $curl = new Curl;
 
-    header("Location: /invest_dashboard.php");
+    header('Location: /invest_dashboard.php');
     exit();
 
 ?>
