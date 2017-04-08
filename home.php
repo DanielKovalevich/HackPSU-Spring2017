@@ -73,7 +73,7 @@
                                 <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
                             </li>
                             <li>
-                                <a href="#">Investment Tools</a>
+                                <a href="/invest_tools.html">Investment Tools</a>
                             </li>
                         </ul>
                     </li>
@@ -178,3 +178,4 @@
 </body>
 
 </html>
+
