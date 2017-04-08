@@ -79,13 +79,13 @@
                     </li>
                
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
                             </li>
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="/invest_tools.html">Investment Tools</a>
                             </li>
                         </ul>
                     </li>
@@ -217,3 +217,4 @@
 </body>
 
 </html>
+
