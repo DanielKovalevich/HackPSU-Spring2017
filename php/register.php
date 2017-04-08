@@ -2,15 +2,11 @@
 session_start();
 include("connection.php");
 
-if(isset($_POST["submit"]))
-{
 	if(empty($_POST["username"]) || empty($_POST["password"]))
 	{
 		$error = "Both fields are required";
 	} else {
 
-		$username = stripslashes(mysqli_real_escape_string($db, $username));
-		$password = stripslashes(mysqli_real_escape_string($db, $password));
 		$password = md5($password);
 
 		//Add the username and password to the database
@@ -27,5 +23,4 @@ if(isset($_POST["submit"]))
 			print("Well, fuck");
 		}
 
-	}
 }
