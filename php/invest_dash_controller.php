@@ -1,11 +1,9 @@
 <?php
-
+    print("string");
     include("curl.php");
     $curl = new Curl;
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        
-        header("Location: http://104.236.109.78/invest_dashboard.php");
-        exit();
-    }
+    header('Location: /invest_dashboard.php');
+    exit();
+
 ?>
