@@ -86,14 +86,14 @@
                      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                          <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
-                            <li class="active">
+                            <li>
                                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                     
                             <li>
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                     <ul id="demo" class="collapse">
-                                        <li>
+                                        <li class="active">
                                             <a href="/php/invest_dash_controller.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
                                         </li>
                                         <li>
