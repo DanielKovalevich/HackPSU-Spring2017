@@ -1,24 +1,26 @@
 <html lang="en">
 
-
         <head>
-
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="">
             <meta name="author" content="">
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
             <title>SB Admin - Bootstrap Admin Template</title>
 
             <!-- Bootstrap Core CSS -->
-            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="../css/bootstrap.min.css" rel="stylesheet">
 
             <!-- Custom CSS -->
-            <link href="css/sb-admin.css" rel="stylesheet">
+            <link href="../css/sb-admin.css" rel="stylesheet">
 
             <!-- Morris Charts CSS -->
-            <link href="css/plugins/morris.css" rel="stylesheet">
+            <link href="../css/plugins/morris.css" rel="stylesheet">
 
             <!-- Custom Fonts -->
             <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -65,17 +67,17 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
                             <li class="active">
-                                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                                <a href="../index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                     
                             <li>
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
-                                        <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
+                                        <a href="/invest_dash_controller.php">Investment Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="/invest_tools.html">Investment Tools</a>
+                                        <a href="../invest_tools.html">Investment Tools</a>
                                     </li>
                                 </ul>
                             </li>
