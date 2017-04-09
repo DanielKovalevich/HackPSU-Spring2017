@@ -155,8 +155,10 @@ if(!isset($_SESSION['accounttype'])) {
 
                             <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
 
-                            <li><?php echo $user['nickname'];?></li>
-                            <?php } ?>
+                            <?php echo("<a href='supersecret.php?".$user['nickname'].">".$user['nickname']."</a>");
+
+                        } ?>
+
 
                         </ul>
                     </li>
@@ -284,4 +286,5 @@ if(!isset($_SESSION['accounttype'])) {
 </body>
 
 </html>
+
 
