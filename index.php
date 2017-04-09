@@ -284,7 +284,7 @@ body{ text-align: center;}
                                     <td>1,000,000</td>
                                     <td>2%</td>
                                     <td>$5</td>
-                                    <td>7,500,000</td>
+                                    <td>750,000</td>
                                     <td>D. Trump
                                     </tr>
                                 </tbody>
