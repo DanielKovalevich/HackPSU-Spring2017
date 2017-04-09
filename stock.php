@@ -145,22 +145,14 @@ else if(!isset($_SESSION['accountname'])) {
 
                     <!-- Put stuff here -->
                     <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center headerProperties">
-                <u>Your Watchlist</u>
-            </h1>
-        </div>
 
-        <div class="col-lg-12">
-            <form class="form-inline">
-                <div class="form-group">
-                    <label for="transfer">Add Stock To Watchlist:</label>
-                    <input type="text" class="form-control" id="transfer">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center headerProperties">
+                        <u>Your Watchlist</u>
+                    </h1>
                 </div>
-                <button type="submit" class="btn btn-default" id="doEverything">Submit</button>
-            </form>
-        </div>
+
 
         <div id="no-more-tables">
             <table class="col-md-12 table-bordered table-striped table-condensed cf">
@@ -302,6 +294,16 @@ else if(!isset($_SESSION['accountname'])) {
                 </tbody>
             </table>
         </div>
+        <div class="col-lg-12 col-md-offset-4">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="transfer">Add Stock To Watchlist:</label>
+                    <input type="text" class="form-control" id="transfer">
+                </div>
+                <button type="submit" class="btn btn-default" id="doEverything">Submit</button>
+            </form>
+        </div>
+
     </div>
 
 </div>
