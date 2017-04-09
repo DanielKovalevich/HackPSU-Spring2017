@@ -151,6 +151,17 @@ else if(!isset($_SESSION['accountname'])) {
                 <u>Your Watchlist</u>
             </h1>
         </div>
+
+        <div class="col-lg-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="transfer">Add Stock To Watchlist:</label>
+                    <input type="text" class="form-control" id="transfer">
+                </div>
+                <button type="submit" class="btn btn-default" id="doEverything">Submit</button>
+            </form>
+        </div>
+
         <div id="no-more-tables">
             <table class="col-md-12 table-bordered table-striped table-condensed cf">
                 <thead class="cf">
