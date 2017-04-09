@@ -107,12 +107,6 @@
                                     <p class="lead"><?php ?></p>
                                 </div>
                             </div>
-
-                            <ol class="breadcrumb">
-                                <li class="active">
-                                    <i class="fa fa-dashboard"></i> Investment Dashboard
-                                </li>
-                            </ol>
                         </div>
                     </div>
                 </div>
