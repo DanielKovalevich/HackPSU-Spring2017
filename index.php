@@ -2,6 +2,8 @@
 include('php/graphs.php');
 include('php/capitalApi.php');
 
+session_start();
+
 $capitalApi = new capitalApi;
 
 if(!isset($_SESSION['accounttype'])) {
@@ -70,11 +72,19 @@ body{ text-align: center;}
       function drawChart() {
         //Hardcoded for now.. 
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Balance', 'Reward'],
-          ['2014',  1000,      400],
-          ['2015',  1170,      460],
-          ['2016',  660,       1120],
-          ['2017',  1030,      540]
+          ['Month', 'Balance', 'Reward'],
+          ['January',  1000,      400],
+          ['Febuary',  1170,      460],
+          ['March',  660,       1120],
+          ['April',  1030,      540],
+          ['May',  40, 50],
+          ['June', 499, 231],
+          ['July', 429, 999],
+          ['August', 200, 412],
+          ['September', 400, 211],
+          ['October', 222, 211],
+          ['November', 100, 211],
+          ['December', 200, 200]
         ]);
 
         var options = {
