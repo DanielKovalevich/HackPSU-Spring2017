@@ -70,18 +70,18 @@
                     
                             <li>
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
-                                <ul id="demo" class="collapse">
-                                    <li>
-                                        <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="/invest_tools.html">Investment Tools</a>
-                                    </li>
-                                </ul>
+                                    <ul id="demo" class="collapse">
+                                        <li>
+                                            <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="/invest_tools.html">Investment Tools</a>
+                                        </li>
+                                    </ul>
                             </li>
 
                             <li>
-                                <a href="atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
+                                <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
                         
                         </ul>
@@ -132,6 +132,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </body>
 
     </html>
