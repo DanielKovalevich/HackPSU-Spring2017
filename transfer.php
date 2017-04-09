@@ -42,6 +42,8 @@ $_SESSION['accountname'] = "Alyson's Account";
     <!-- Morris Charts CSS -->
     <link href="css/plugins/morris.css" rel="stylesheet">
 
+    <link href="css/loading.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -135,8 +137,26 @@ $_SESSION['accountname'] = "Alyson's Account";
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">
-                               Investment Dashboard <small>Statistics Overview</small>
+                               Transfer Funds 
                             </h1>
+                        </div>
+                        <small>Need to loan a friend? Don't have any cash? Transfer funds straight from your account into theirs!</small>
+                    </div>
+                </div>
+                <div id="col-lg-12">
+                    <div class="container">
+                        <div class="row">
+                            <div id="loader">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="lading"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
