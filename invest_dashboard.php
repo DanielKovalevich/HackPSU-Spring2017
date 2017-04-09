@@ -1,3 +1,21 @@
+    <?php
+    include('php/graphs.php');
+    include('php/capitalApi.php');
+
+    $capitalApi = new capitalApi;
+
+    if(!isset($_SESSION['accounttype'])) {
+
+        $_SESSION['accounttype'] = "Credit Card";
+
+    }
+    else if(!isset($_SESSION['accountname'])) {
+
+        $_SESSION['accountname'] = "Alyson's Account";
+    }
+
+    ?>
+    
     <html lang="en">
 
 
@@ -87,7 +105,23 @@
                             <li>
                                 <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
-                        
+
+                            <li>
+                                <a href="transfer.php"><i class="fa fa-fw fa-desktop"></i> Transfer Funds</a>
+                            </li>
+                            
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                                <ul id="users" class="collapse">
+                                    <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
+
+                                    <?php echo("<a href='supersecret.php?id=".$user['nickname'].">".$user['nickname']."</a>");
+
+                                } ?>
+
+
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -106,7 +140,7 @@
                         <div class="col-lg-4">
                             <h2 class="page-header" style="text-align: center;">Account Balance</h2>
                                 <p class="lead">
-                                    <h3 style="text-align: center;">$30,000</h3>
+                                    <h3 style="text-align: center;" id="account" value="value">30000</h3>
                                 </p>
                         </div>
                         
@@ -129,8 +163,17 @@
                         <div class="col-lg-4">
                             <h2 class="page-header" style="text-align: center;">Investment Balance</h2>
                                 <p class="lead">
-                                    <h3 style="text-align: center;">$1,500</h3>
+                                    <h3 style="text-align: center;" id="investing" value="value">1500</h3>
                                 </p>
+                        </div>
+                        <div class="col-lg-12 col-md-offset-3">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="transfer">How much would you like to transfer to your investment account:</label>
+                                    <input type="number" min="0" class="form-control" id="transfer" value="value">
+                                </div>
+                                <button type="submit" class="btn btn-default" id="doEverything" onclick="return decriment()">Submit</button>
+                            </form>
                         </div>
 
                         </div>
@@ -141,13 +184,47 @@
 
     </html>
 
-    <script>
-   new Morris.Donut({
-  element: 'morris-donut-chart',
-  data: [
-    {label: "Account Balance", value: 30000},
-    {label: "Investment Balance", value: 1500}
-  ]
-});
+<script>
+    var account = Number(document.getElementById("account").innerHTML);
+    var investing = Number(document.getElementById("investing").innerHTML);
 
+   new Morris.Donut({
+    element: 'morris-donut-chart',
+    data: [
+        {label: "Account Balance", value: account},
+        {label: "Investment Balance", value: investing}
+    ]
+    });
+</script>
+<script type='text/javascript'>
+    function decriment() {
+        var transfer = Number(document.getElementById("transfer").value);
+        console.log(transfer);
+        var account = Number(document.getElementById("account").innerHTML);
+        console.log(account);
+        var investing = Number(document.getElementById("investing").innerHTML);
+        console.log(investing);
+        if (account - investing >= transfer) {
+            document.getElementById("account").innerHTML = account - transfer;
+            document.getElementById("investing").innerHTML = investing + transfer;
+
+
+            var account = Number(document.getElementById("account").innerHTML);
+            var investing = Number(document.getElementById("investing").innerHTML);
+
+            new Morris.Donut({
+                element: 'morris-donut-chart',
+                data: [
+                    {label: "Account Balance", value: account},
+                    {label: "Investment Balance", value: investing}
+                ]
+                });
+        }
+        else {
+            alert("You do not have the funds!");
+        }
+
+        return false;
+            
+    }
 </script>

@@ -173,9 +173,12 @@ body{ text-align: center;}
                     </li>
 
                     <li>
+                        <a href="transfer.php"><i class="fa fa-fw fa-desktop"></i> Transfer Funds</a>
+                    </li>
+
+                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="users" class="collapse">
-
                             <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
 
                             <?php echo("<a href='supersecret.php?id=".$user['nickname'].">".$user['nickname']."</a>");
