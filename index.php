@@ -9,6 +9,10 @@ if(!isset($_SESSION['accounttype'])) {
     $_SESSION['accounttype'] = "Credit Card";
 
 }
+else if(!isset($_SESSION['accountname'])) {
+
+    $_SESSION['accountname'] = "Alyson's Account";
+}
 
 ?>
 
@@ -101,7 +105,7 @@ if(!isset($_SESSION['accounttype'])) {
             <ul class="nav navbar-right top-nav">
                
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php $_SESSION['accountname'];?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="createAccount.html"><i class="fa fa-fw fa-user"></i> Open New Account</a>
@@ -155,7 +159,7 @@ if(!isset($_SESSION['accounttype'])) {
 
                             <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
 
-                            <?php echo("<a href='supersecret.php?".$user['nickname'].">".$user['nickname']."</a>");
+                            <?php echo("<a href='supersecret.php?id=".$user['nickname'].">".$user['nickname']."</a>");
 
                         } ?>
 
