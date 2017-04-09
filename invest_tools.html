@@ -62,6 +62,9 @@
                                 </ul>
                             </li>
                         </ul>
+
+                          <div class="navbar-brand">
+                          <p class="text-left">Placeholder</p>
                          <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                          <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
@@ -122,7 +125,7 @@
                                             <div> 
                                                 <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button onclick="getFutOneInvest()">Calculate</button>
+                                                <button onclick="return getFutOneInvest()">Calculate</button>
                                             <div>
                                                 <p>Future Value: <p id="futureOnce"></p></p>
                                             </div>
@@ -151,7 +154,7 @@
                                             <div> 
                                                 <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button onclick="getFutManyInvest()">Calculate</button>
+                                                <button onclick="return getFutManyInvest()">Calculate</button>
                                             <div>
                                                 <p>Future Value: <p id="yearlyInvest"></p></p>
                                             </div>
@@ -177,7 +180,7 @@
                                             <div> 
                                                 <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button onclick="getPresentNetWorth()">Calculate</button>
+                                                <button onclick="return getPresentNetWorth()">Calculate</button>
                                             <div>
                                                 <p>Present Value: <p id="PresentNet"></p></p>
                                             </div>
@@ -203,7 +206,7 @@
                                             <div> 
                                                 <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button onclick="getFutNet()">Calculate</button>
+                                                <button onclick="return getFutNet()">Calculate</button>
                                             <div>
                                                 <p>Required Yearly Investment: <p id="futureNet"></p></p>
                                             </div>
@@ -224,6 +227,8 @@
         var future = pmt * (Math.pow(1 + rate, prd));
 
         document.getElementById("futureOnce").innerHTML = Math.round(future * 100) / 100;
+
+        return false;
     }
 
     function getFutManyInvest() {
@@ -232,6 +237,8 @@
         var future = pmt * ((Math.pow(1 + rate, prd - 1))/ rate);
 
         document.getElementById("yearlyInvest").innerHTML = Math.round(future * 100) / 100;
+
+        return false;
     }
 
     function getPresentNetWorth() {
@@ -241,6 +248,8 @@
 
         document.getElementById("PresentNet").innerHTML = Math.round(future * 100) / 100;
 
+        return false;
+
     }
 
     function getFutNet() {
@@ -249,6 +258,8 @@
         var future = FV / ((Math.pow(1 + rate, prd - 1))/ rate);
 
         document.getElementById("futureNet").innerHTML = Math.round(future * 100) / 100;
+
+        return false;
     }
 
 </script>
