@@ -77,7 +77,7 @@ body{ text-align: center;}
           ['September', 400, 211],
           ['October', 222, 211],
           ['November', 100, 211],
-          ['December', 200, 200]
+          ['December', 1200, 200]
         ]);
 
         var options = {
@@ -112,7 +112,7 @@ body{ text-align: center;}
                
                
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php $_SESSION['accountname'];?><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Alyson's Account<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -227,7 +227,7 @@ body{ text-align: center;}
                             </div>
                             <div class="panel-body">  
                             <span class="spanDataEntry">
-                                $31,933
+                                $1,200
                             </span>
                             </div>
                     </div>
@@ -239,7 +239,7 @@ body{ text-align: center;}
                             </div>
                             <div class="panel-body">
                             <span class="spanDataEntry">
-                                25,532
+                                $200
                             </span>
                             </div>
                         </div>
