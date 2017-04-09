@@ -63,7 +63,7 @@
                 <!-- Navigation -->
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                
+
                     <!-- Top Menu Items -->
                     <ul class="nav navbar-right top-nav">
                     
@@ -83,6 +83,8 @@
                             </ul>
                         </li>
                     </ul>
+                      <div class="navbar-brand">
+            <p class="text-left">InvestOne</p>
                      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                          <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
@@ -94,7 +96,7 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                     <ul id="demo" class="collapse">
                                         <li class="active">
-                                            <a href="/php/invest_dash_controller.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
+                                            <a href="invest_dashboardr.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
                                         </li>
                                         <li>
                                             <a href="/invest_tools.html"><i class"fa fa-fw fa-gear"></i>Investment Tools</a>

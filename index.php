@@ -139,7 +139,7 @@ body{ text-align: center;}
             </ul>
 
             <div class="navbar-brand">
-            <p class="text-left">Placeholder</p>
+            <p class="text-left">InvestOne</p>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
@@ -151,7 +151,7 @@ body{ text-align: center;}
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
+                                <a href="invest_dashboard.php">Investment Dashboard</a>
                             </li>
                             <li>
                                 <a href="/invest_tools.html">Investment Tools</a>
@@ -195,7 +195,7 @@ body{ text-align: center;}
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-9">
-                        <h1 class="page-header">
+                        <h1 class="page-header dashboardCenter">
                             Dashboard
                         </h1>
                     </div>
