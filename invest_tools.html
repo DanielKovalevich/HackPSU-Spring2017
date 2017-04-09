@@ -102,10 +102,10 @@
 
                                         <div class="container">
                                           <h4>The following models calculate values based on information entered by the user. Interest rate is based upon the 10 year treasury rate of the USA, which is the risk free rate on the market. Actual returns may vary from models.</h4>
-                                          <a href="#whatif" class="btn btn-info" data-toggle="collapse">Future Value with Single Investment</a>
+                                          <a href="#whatif" id="fvsi" class="btn btn-info" data-toggle="collapse">Future Value with Single Investment</a>
                                           <div id="whatif" class="collapse">
                                             
-                                      <form>
+                                      <form> 
                                             <div class="form-group">
                                               <label for="pmt">One Time Investment:</label>
                                               <input type="number" class="form-control" id="pmt">
@@ -125,16 +125,12 @@
                                         </div>
 
 
+
+
+
                                         <div class="container">
-                                          <a href="#whatif1" class="btn btn-info" data-toggle="collapse">Future Value with Yearly Investment</a>
+                                          <a href="#whatif1" id="fvsi" class="btn btn-info" data-toggle="collapse">Future Value with Yearly Investment</a>
                                           <div id="whatif1" class="collapse">
-
-                                         
-                                            <div class="padding">
-                                            </div>
-
-                                          
-
 
                                             
                                       <form>
@@ -156,6 +152,30 @@
                                             </div>
                                         </div>
 
+
+                                        <div class="container">
+                                          <a href="#whatif2" id="fvsi" class="btn btn-info" data-toggle="collapse">Present Value of Future Net Worth</a>
+                                          <div id="whatif2" class="collapse">
+
+                                            
+                                      <form>
+                                            <div class="form-group">
+                                              <label for="fv">Future Net Worth:</label>
+                                              <input type="number" class="form-control" id="fv">
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="prd">Number of Years:</label>
+                                              <input type="number" class="form-control" id="prd">
+                                            </div>
+                                            <div> 
+                                                <p>Risk Free Rate: </p>
+                                            </div>
+                                            <div>
+                                                <p>Future Value: </p>
+                                            </div>
+                                      </form>
+                                            </div>
+                                        </div>
 
 
                     </div>
