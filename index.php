@@ -2,6 +2,8 @@
 include('php/graphs.php');
 include('php/capitalApi.php');
 
+session_start();
+
 $capitalApi = new capitalApi;
 
 if(!isset($_SESSION['accounttype'])) {
@@ -32,12 +34,6 @@ body{ text-align: center;}
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
-
-
     <title>SB Admin - Bootstrap Admin Template</title>
 
     <!-- Bootstrap Core CSS -->
@@ -50,7 +46,6 @@ body{ text-align: center;}
     <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/CustomFont.css" rel="stylesheet" type="text/css">
 
     <link href="css/DivCentering.css" rel="stylesheet" type="text/css">
@@ -70,11 +65,19 @@ body{ text-align: center;}
       function drawChart() {
         //Hardcoded for now.. 
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Balance', 'Reward'],
-          ['2014',  1000,      400],
-          ['2015',  1170,      460],
-          ['2016',  660,       1120],
-          ['2017',  1030,      540]
+          ['Month', 'Balance', 'Reward'],
+          ['January',  1000,      400],
+          ['Febuary',  1170,      460],
+          ['March',  660,       1120],
+          ['April',  1030,      540],
+          ['May',  40, 50],
+          ['June', 499, 231],
+          ['July', 429, 999],
+          ['August', 200, 412],
+          ['September', 400, 211],
+          ['October', 222, 211],
+          ['November', 100, 211],
+          ['December', 200, 200]
         ]);
 
         var options = {
@@ -98,7 +101,6 @@ body{ text-align: center;}
 
 <body>
 
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -113,7 +115,7 @@ body{ text-align: center;}
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php $_SESSION['accountname'];?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="createAccount.html"><i class="fa fa-fw fa-user"></i> Open New Account</a>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -137,7 +139,6 @@ body{ text-align: center;}
             </ul>
 
             <div class="navbar-brand">
-
             <p class="text-left">Placeholder</p>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -145,15 +146,15 @@ body{ text-align: center;}
                     <li class="active">
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-               
+                
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="/php/invest_dash_controller.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
+                                <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
                             </li>
                             <li>
-                                <a href="/invest_tools.html"><i class"fa fa-fw fa-gear"></i>Investment Tools</a>
+                                <a href="/invest_tools.html">Investment Tools</a>
                             </li>
                             <li>
                                 <a href="/stock.php"><i class"fa fa-fw fa-gear"></i>Stock Picks</a>
@@ -225,6 +226,9 @@ body{ text-align: center;}
                                 <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Current Balance</strong></p>
                             </div>
                             <div class="panel-body">  
+                            <span class="spanDataEntry">
+                                This is a test 1
+                            </span>
                             </div>
                     </div>
                 </div>
@@ -234,6 +238,9 @@ body{ text-align: center;}
                                 <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Current Rewards</strong></p>
                             </div>
                             <div class="panel-body">
+                            <span class="spanDataEntry">
+                                This is a test 2
+                            </span>
                             </div>
                         </div>
                     </div>
@@ -246,7 +253,7 @@ body{ text-align: center;}
                         <div class="panel panel-default">
                             <span class="panel-heading">
                             <div id="char_div".>
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i><u>Balance History</u></h3>
+                                <h3 class="panel-title balanceHistoryPad"><i class="fa fa-bar-chart-o fa-fw"></i><u>Balance History</u></h3>
                             </div>
                             <div class="panel-body">
                                 <div id="chart-body" style="width: 1000px; height: 300px">
@@ -264,20 +271,25 @@ body{ text-align: center;}
                           <div class="col1">
                             <div class="text-center">
                                 <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Outstanding Loans</strong></p>
+                    
+              
+                        
+                   
                             </div>
-                            <div class="panel-body">  
-                            </div>
+                       
                     </div>
                 </div>
                    <div class="col-lg-4">
                          <div class="col2">
                             <div class="text-center">
                                 <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Transactions</strong></p>
+                      
                             </div>
                             <div class="panel-body">
                             </div>
                         </div>
                     </div>
+                       
                 </div>
                 <!-- /.row -->
 
@@ -304,5 +316,4 @@ body{ text-align: center;}
 </body>
 
 </html>
-
 
