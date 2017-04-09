@@ -17,7 +17,10 @@ if(!isset($_SESSION['accounttype'])) {
 
 <head>
 
-
+    <style> 
+body{ text-align: center;}
+#chart_div{width: 800px; margin: 0 auto; text-align: left;}
+</style>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,6 +76,7 @@ if(!isset($_SESSION['accounttype'])) {
         var options = {
           title: 'Account Balances',
           curveType: 'function',
+          chartArea : { right: 3, margin: 0 },
           legend: { position: 'bottom' }
         };
 
@@ -100,6 +104,7 @@ if(!isset($_SESSION['accounttype'])) {
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                
+               
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -126,6 +131,10 @@ if(!isset($_SESSION['accounttype'])) {
                     </ul>
                 </li>
             </ul>
+
+            <div class="navbar-brand">
+
+            <p class="text-left">Placeholder</p>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
@@ -163,6 +172,7 @@ if(!isset($_SESSION['accounttype'])) {
                         </ul>
                     </li>
                 </ul>
+            </div>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
@@ -202,7 +212,7 @@ if(!isset($_SESSION['accounttype'])) {
                     <div class="col-lg-4">
                           <div class="col1">
                             <div class="text-center">
-                                <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Tasks Panel</strong></p>
+                                <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Current Balance</strong></p>
                             </div>
                             <div class="panel-body">  
                             </div>
@@ -211,7 +221,7 @@ if(!isset($_SESSION['accounttype'])) {
                     <div class="col-lg-4">
                          <div class="col2">
                             <div class="text-center">
-                                <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Transactions Panel</strong></p>
+                                <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Current Rewards</strong></p>
                             </div>
                             <div class="panel-body">
                             </div>
@@ -224,8 +234,9 @@ if(!isset($_SESSION['accounttype'])) {
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                            <span class="panel-heading">
+                            <div id="char_div".>
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i><u>Balance History</u></h3>
                             </div>
                             <div class="panel-body">
                                 <div id="chart-body" style="width: 1000px; height: 300px">
@@ -239,24 +250,21 @@ if(!isset($_SESSION['accounttype'])) {
 
                 <div class="row">
                     
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
+                     <div class="col-lg-4">
+                          <div class="col1">
+                            <div class="text-center">
+                                <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Outstanding Loans</strong></p>
                             </div>
-                            <div class="panel-body">
-                                
-                         </div>
+                            <div class="panel-body">  
+                            </div>
                     </div>
                 </div>
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
+                   <div class="col-lg-4">
+                         <div class="col2">
+                            <div class="text-center">
+                                <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Transactions</strong></p>
                             </div>
                             <div class="panel-body">
-                              
-                             
                             </div>
                         </div>
                     </div>
