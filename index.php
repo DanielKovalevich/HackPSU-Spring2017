@@ -161,7 +161,6 @@ body{ text-align: center;}
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="users" class="collapse">
-
                             <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
 
                             <?php echo("<a href='supersecret.php?".$user['nickname'].">".$user['nickname']."</a>");
