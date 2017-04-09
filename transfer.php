@@ -88,7 +88,7 @@ $_SESSION['accountname'] = "Alyson's Account";
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
+                    <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
             
@@ -108,7 +108,7 @@ $_SESSION['accountname'] = "Alyson's Account";
                         <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="transfer.php"><i class="fa fa-fw fa-desktop"></i> Transfer Funds</a>
                     </li>
                     
@@ -143,6 +143,27 @@ $_SESSION['accountname'] = "Alyson's Account";
                         <small>Need to loan a friend? Don't have any cash? Transfer funds straight from your account into theirs!</small>
                     </div>
                 </div>
+
+                <div class="col-lg-12 col-md-offset-3">
+                    <form class="form-inline">
+                        <div class="form-group" style="padding-left:20px;">
+                            <label for="transfer">Transfer Amount:</label>
+                            <input type="number" min="0" class="form-control" id="transfer" value="value">
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="col-lg-12 col-md-offset-3">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="transfer">Transfer to Account:</label>
+                            <input type="text" class="form-control" id="transfer">
+                        </div>
+                        <button type="submit" class="btn btn-default" id="doEverything">Submit</button>
+                    </form>
+                </div>
+
                 <div id="col-lg-12">
                     <div class="container">
                         <div class="row">
@@ -160,6 +181,8 @@ $_SESSION['accountname'] = "Alyson's Account";
                         </div>
                     </div>
                 </div>
+
+
         </div>
     </body>
 </html>

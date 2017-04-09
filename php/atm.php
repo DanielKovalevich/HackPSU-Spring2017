@@ -85,7 +85,7 @@
                      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
-                            <li class="active">
+                            <li>
                                 <a href="../index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                     
@@ -101,7 +101,7 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <li class="active">
                                 <a href="atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
 
