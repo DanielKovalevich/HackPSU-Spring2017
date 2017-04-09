@@ -1,3 +1,7 @@
+<?php
+include('php/graphs.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +25,9 @@
     <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/CustomFont.css" rel="stylesheet" type="text/css">
+
+    <link href="css/DivCentering.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +35,37 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        //Hardcoded for now.. 
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Balance', 'Reward'],
+          ['2014',  1000,      400],
+          ['2015',  1170,      460],
+          ['2016',  660,       1120],
+          ['2017',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Account Balances',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart-body'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+
+
 
 </head>
 
@@ -56,6 +93,16 @@
                         <li>
                             <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
+                        <li class="divider"></li>
+                        <div class="panel-group">
+                            <div class="downdrop">
+  <button class="dropbtn">Dropdown</button>
+  <div class="downdrop-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
                     </ul>
                 </li>
             </ul>
@@ -102,9 +149,43 @@
                 </div>
                 <!-- /.row -->
 
-                
+                       <div class="col-lg-4">
+                       
+                        <div class="divCentering">
+                            <div class="text-center">
+                                <p class="text-center"> Account Summary</p>
+                            </div>
+                           <div class="panel-body">
+                              
+                             
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 <!-- /.row -->
+             
 
+                <div class="row">
+                    
+                    <div class="col-lg-4">
+                          <div class="col1">
+                            <div class="text-center">
+                                <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Tasks Panel</strong></p>
+                            </div>
+                            <div class="panel-body">  
+                            </div>
+                    </div>
+                </div>
+                    <div class="col-lg-4">
+                         <div class="col2">
+                            <div class="text-center">
+                                <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Transactions Panel</strong></p>
+                            </div>
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                
                 <!-- /.row -->
 
@@ -115,7 +196,9 @@
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-area-chart"></div>
+                                <div id="chart-body" style="width: 1000px; height: 300px">
+                                    <!--Chart spawned in by JS!-->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -123,14 +206,7 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
-                            </div>
-                           
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -138,9 +214,9 @@
                             </div>
                             <div class="panel-body">
                                 
-                                                        </div>
-                        </div>
+                         </div>
                     </div>
+                </div>
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">

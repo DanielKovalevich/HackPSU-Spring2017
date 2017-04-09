@@ -1,7 +1,6 @@
 <?php
 
 $test = new capitalApi;
-$test->getUserAccounts("Checking");
 
 class capitalApi {
 
@@ -36,6 +35,14 @@ class capitalApi {
 
 		$url = 'http://api.reimaginebanking.com/accounts?type='.urlencode($parameters).'&key=f88bb319eadd8f435028df201925f4d2';
 
-		print_r(json_decode($this->runCurlGet($url)));
+		return json_decode($this->runCurlGet($url));
 	}
+
+	function getUserAccountById($accountId) {
+
+		$url = 'http://api.reimaginebanking.com/accounts/'.$accountId.'?key=f88bb319eadd8f435028df201925f4d2';
+		return $this->json_decode($this->runCurlGet($url));
+	}
+
+	
 }
