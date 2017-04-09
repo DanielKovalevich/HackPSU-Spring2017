@@ -66,7 +66,7 @@
                          <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
                             <li class="active">
-                                <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                     
                             <li>
@@ -108,23 +108,23 @@
                                         <div class="container">
                                           <h4>The following models calculate values based on information entered by the user. Interest rate is based upon the 10 year treasury rate of the USA, which is the risk free rate on the market. Actual returns may vary from models.</h4>
                                           <a href="#whatif" id="fvsi" class="btn btn-info" data-toggle="collapse">Future Value with Single Investment</a>
-                                          <div id="whatif" class="collapse">
+                                          <div id="whatif" class="collapse in">
                                             
                                       <form> 
                                             <div class="form-group">
                                               <label for="pmt">One Time Investment:</label>
-                                              <input type="number" class="form-control" id="pmt">
+                                              <input type="number" class="form-control" id="pmt" value="value">
                                             </div>
                                             <div class="form-group">
                                               <label for="prd">Number of Years:</label>
-                                              <input type="number" class="form-control" id="prd">
+                                              <input type="number" class="form-control" id="prd" value="value">
                                             </div>
                                             <div> 
-                                                <p>Risk Free Rate: </p>
+                                                <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button>Calculate</button>
+                                                <button onclick="getFutOneInvest()">Calculate</button>
                                             <div>
-                                                <p>Future Value: </p>
+                                                <p>Future Value: <p id="futureOnce"></p></p>
                                             </div>
                                       </form>
                                             </div>
@@ -136,24 +136,24 @@
 
                                         <div class="container">
                                           <a href="#whatif1" id="fvsi" class="btn btn-info" data-toggle="collapse">Future Value with Yearly Investment</a>
-                                          <div id="whatif1" class="collapse">
+                                          <div id="whatif1" class="collapse in">
 
                                             
                                       <form>
                                             <div class="form-group">
-                                              <label for="pmt">Yearly Investment:</label>
-                                              <input type="number" class="form-control" id="pmt">
+                                              <label for="pmt2">Yearly Investment:</label>
+                                              <input type="number" class="form-control" id="pmt2" value="value">
                                             </div>
                                             <div class="form-group">
-                                              <label for="prd">Number of Years:</label>
-                                              <input type="number" class="form-control" id="prd">
+                                              <label for="prd2">Number of Years:</label>
+                                              <input type="number" class="form-control" id="prd2" value="value">
                                             </div>
                                             <div> 
-                                                <p>Risk Free Rate: </p>
+                                                <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button>Calculate</button>
+                                                <button onclick="getFutManyInvest()">Calculate</button>
                                             <div>
-                                                <p>Future Value: </p>
+                                                <p>Future Value: <p id="yearlyInvest"></p></p>
                                             </div>
                                       </form>
                                             </div>
@@ -162,59 +162,93 @@
 
                                         <div class="container">
                                           <a href="#whatif2" id="fvsi" class="btn btn-info" data-toggle="collapse">Present Value of Future Net Worth</a>
-                                          <div id="whatif2" class="collapse">
+                                          <div id="whatif2" class="collapse in">
 
                                             
                                       <form>
                                             <div class="form-group">
                                               <label for="fv">Future Net Worth:</label>
-                                              <input type="number" class="form-control" id="fv">
+                                              <input type="number" class="form-control" id="fv" value="value">
                                             </div>
                                             <div class="form-group">
-                                              <label for="prd">Number of Years:</label>
-                                              <input type="number" class="form-control" id="prd">
+                                              <label for="prd3">Number of Years:</label>
+                                              <input type="number" class="form-control" id="prd3" value="value">
                                             </div>
                                             <div> 
-                                                <p>Risk Free Rate: </p>
+                                                <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button>Calculate</button>
+                                                <button onclick="getPresentNetWorth()">Calculate</button>
                                             <div>
-                                                <p>Present Value: </p>
+                                                <p>Present Value: <p id="PresentNet"></p></p>
                                             </div>
                                       </form>
                                             </div>
                                         </div>
-
-
+ 
 
                                         <div class="container">
                                           <a href="#whatif3" id="fvsi" class="btn btn-info" data-toggle="collapse">Yearly Investment for Future Net Worth</a>
-                                          <div id="whatif3" class="collapse">
+                                          <div id="whatif3" class="collapse in">
 
                                             
                                       <form>
                                             <div class="form-group">
-                                              <label for="fv">Future Net Worth:</label>
-                                              <input type="number" class="form-control" id="fv">
+                                              <label for="fv2">Future Net Worth:</label>
+                                              <input type="number" class="form-control" id="fv2" value="value">
                                             </div>
                                             <div class="form-group">
-                                              <label for="prd">Number of Years:</label>
-                                              <input type="number" class="form-control" id="prd">
+                                              <label for="prd4">Number of Years:</label>
+                                              <input type="number" class="form-control" id="prd4" value="value">
                                             </div>
                                             <div> 
-                                                <p>Risk Free Rate: </p>
+                                                <p>Risk Free Rate: 2.36%</p>
                                             </div>
-                                                <button>Calculate</button>
+                                                <button onclick="getFutNet()">Calculate</button>
                                             <div>
-                                                <p>Required Yearly Investment: </p>
+                                                <p>Required Yearly Investment: <p id="futureNet"></p></p>
                                             </div>
                                       </form>
-                                            </div>
-                                        </div>
-
-
-
+                                </div>
+                          </div>
                     </div>
             </div>
         </body>
 </html>
+
+<script>
+    var rate = .0236;
+
+    function getFutOneInvest(){
+        var pmt = document.getElementById("pmt").value;
+        var prd = document.getElementById("prd").value;
+        var future = pmt * (Math.pow(1 + rate, prd));
+
+        document.getElementById("futureOnce").innerHTML = Math.round(future * 100) / 100;
+    }
+
+    function getFutManyInvest() {
+        var pmt = document.getElementById("pmt2").value;
+        var prd = document.getElementById("prd2").value;
+        var future = pmt * ((Math.pow(1 + rate, prd - 1))/ rate);
+
+        document.getElementById("yearlyInvest").innerHTML = Math.round(future * 100) / 100;
+    }
+
+    function getPresentNetWorth() {
+        var FV = document.getElementById("fv").value;
+        var prd = document.getElementById("prd3").value;
+        var future = FV / (Math.pow(1 + rate, prd));
+
+        document.getElementById("PresentNet").innerHTML = Math.round(future * 100) / 100;
+
+    }
+
+    function getFutNet() {
+        var FV = document.getElementById("fv2").value;
+        var prd = document.getElementById("prd4").value;
+        var future = FV / ((Math.pow(1 + rate, prd - 1))/ rate);
+
+        document.getElementById("futureNet").innerHTML = Math.round(future * 100) / 100;
+    }
+
+</script>
