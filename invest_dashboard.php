@@ -202,12 +202,9 @@
 <script type='text/javascript'>
     function decriment() {
         var transfer = Number(document.getElementById("transfer").value);
-        console.log(transfer);
         var account = Number(document.getElementById("account").innerHTML);
-        console.log(account);
         var investing = Number(document.getElementById("investing").innerHTML);
-        console.log(investing);
-        if (account - investing >= transfer) {
+        if (account >= 0) {
             document.getElementById("account").innerHTML = account - transfer;
             document.getElementById("investing").innerHTML = investing + transfer;
 

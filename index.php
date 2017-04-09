@@ -194,7 +194,7 @@ body{ text-align: center;}
 
                 <!-- Page Heading -->
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9">
                         <h1 class="page-header">
                             Dashboard
                         </h1>
@@ -227,7 +227,7 @@ body{ text-align: center;}
                             </div>
                             <div class="panel-body">  
                             <span class="spanDataEntry">
-                                This is a test 1
+                                $31,933
                             </span>
                             </div>
                     </div>
@@ -239,7 +239,7 @@ body{ text-align: center;}
                             </div>
                             <div class="panel-body">
                             <span class="spanDataEntry">
-                                This is a test 2
+                                25,532
                             </span>
                             </div>
                         </div>
@@ -252,9 +252,6 @@ body{ text-align: center;}
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <span class="panel-heading">
-                            <div id="char_div".>
-                                <h3 class="panel-title balanceHistoryPad"><i class="fa fa-bar-chart-o fa-fw"></i><u>Balance History</u></h3>
-                            </div>
                             <div class="panel-body">
                                 <div id="chart-body" style="width: 1000px; height: 300px">
                                     <!--Chart spawned in by JS!-->
