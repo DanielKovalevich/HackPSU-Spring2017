@@ -128,6 +128,8 @@ else if(!isset($_SESSION['accountname'])) {
                         </li>
                     </ul>
                 </div>
+                  <div class="navbar-brand">
+            <p class="text-left">InvestOne</p>
                 <!-- /.navbar-collapse -->
             </nav>
             <div id="page-wrapper">
