@@ -124,15 +124,7 @@ body{ text-align: center;}
                         <li>
                             <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
-                        <li class="divider"></li>
-                        <div class="panel-group">
-                            <div class="downdrop">
-                        <button class="dropbtn">Dropdown</button>
-                        <div class="downdrop-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
+                        
                         </div>
                     </ul>
                 </li>
