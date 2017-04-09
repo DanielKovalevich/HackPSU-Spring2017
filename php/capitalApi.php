@@ -41,7 +41,13 @@ class capitalApi {
 	function getUserAccountById($accountId) {
 
 		$url = 'http://api.reimaginebanking.com/accounts/'.$accountId.'?key=f88bb319eadd8f435028df201925f4d2';
-		return $this->json_decode($this->runCurlGet($url));
+		return json_decode($this->runCurlGet($url));
+	}
+
+	function getAtmLocations($long, $lat) {
+
+		$url = 'http://api.reimaginebanking.com/atms?lat='.urlencode($lat).'&lng='.urlencode($long).'&rad=5&key=f88bb319eadd8f435028df201925f4d2';
+		return json_decode($this->runCurlGet($url));
 	}
 
 	
