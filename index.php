@@ -195,7 +195,7 @@ body{ text-align: center;}
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-9">
-                        <h1 class="page-header dashboardCenter">
+                        <h1 class="page-header text-center dashboardCenter">
                             Dashboard
                         </h1>
                     </div>
@@ -282,7 +282,7 @@ body{ text-align: center;}
                                 <tbody>
                                     <tr>
                                     <td>1,000,000</td>
-                                    <td>$2%</td>
+                                    <td>2%</td>
                                     <td>$5</td>
                                     <td>7,500,000</td>
                                     <td>D. Trump
