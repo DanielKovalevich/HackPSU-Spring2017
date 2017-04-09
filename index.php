@@ -96,13 +96,13 @@ include('php/graphs.php');
                         <li class="divider"></li>
                         <div class="panel-group">
                             <div class="downdrop">
-  <button class="dropbtn">Dropdown</button>
-  <div class="downdrop-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
+                        <button class="dropbtn">Dropdown</button>
+                        <div class="downdrop-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                        </div>
                     </ul>
                 </li>
             </ul>
@@ -110,7 +110,7 @@ include('php/graphs.php');
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                
                     <li>
@@ -123,6 +123,10 @@ include('php/graphs.php');
                                 <a href="/invest_tools.html">Investment Tools</a>
                             </li>
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                     </li>
                   
                 </ul>
@@ -140,11 +144,6 @@ include('php/graphs.php');
                         <h1 class="page-header">
                             Dashboard <small>Statistics Overview</small>
                         </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 <!-- /.row -->
