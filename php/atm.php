@@ -98,6 +98,9 @@
                                     <li>
                                         <a href="../invest_tools.html"><i class"fa fa-fw fa-gear"></i>Investment Tools</a>
                                     </li>
+                                    <li>
+                                        <a href="../stock.php"><i class"fa fa-fw fa-gear"></i>Stock Picks</a>
+                                    </li>
                                 </ul>
                             </li>
 
