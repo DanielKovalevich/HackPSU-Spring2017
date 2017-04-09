@@ -1,4 +1,4 @@
-    <html lang="en">
+<html lang="en">
 
 
         <head>
@@ -37,7 +37,7 @@
         </head>
 
         <body>
-             <div id="wrapper">
+            <div id="wrapper">
                 <!-- Navigation -->
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -88,61 +88,22 @@
                     </div>
                     <!-- /.navbar-collapse -->
                 </nav>
-                <div id="page-wrapper">
 
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1 class="page-header">
-                               Investment Dashboard <small>Statistics Overview</small>
-                            </h1>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 class="page-header" style="text-align: center;">Account Balance</h2>
-                                <p class="lead">
-                                    <h3 style="text-align: center;">$30,000</h3>
-                                </p>
-                        </div>
-                        
-                        
-
-                        <div class="col-lg-4">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Account and Investments</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <div id="morris-donut-chart" style="height: 250px;"></div>
-                                    <div class="text-right">
-                                        <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <h2 class="page-header" style="text-align: center;">Investment Balance</h2>
-                                <p class="lead">
-                                    <h3 style="text-align: center;">$1,500</h3>
-                                </p>
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
+            </div>
         </body>
+</html>
 
-    </html>
-
-    <script>
-   new Morris.Donut({
-  element: 'morris-donut-chart',
-  data: [
-    {label: "Account Balance", value: 30000},
-    {label: "Investment Balance", value: 1500}
-  ]
-});
-
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
 </script>
