@@ -105,6 +105,10 @@
                             <li>
                                 <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
+
+                            <li>
+                                <a href="transfer.php"><i class="fa fa-fw fa-desktop"></i> Transfer Funds</a>
+                            </li>
                             
                             <li>
                                 <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
