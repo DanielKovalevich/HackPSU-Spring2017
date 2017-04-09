@@ -35,7 +35,7 @@ class capitalApi {
 
 		$url = 'http://api.reimaginebanking.com/accounts?key=f88bb319eadd8f435028df201925f4d2';
 
-		return json_decode($this->runCurlGet($url));
+		return json_decode($this->runCurlGet($url), true);
 	}
 
 	function createUser($nickname, $type) {

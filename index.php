@@ -1,6 +1,6 @@
 <?php
 include('php/graphs.php');
-include('php/capitalApi');
+include('php/capitalApi.php');
 
 $capitalApi = new capitalApi;
 
