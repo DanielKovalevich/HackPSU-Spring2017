@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
         <head>
@@ -10,6 +11,7 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="css/invest.css">
           
 
             <title>SB Admin - Bootstrap Admin Template</title>
@@ -71,12 +73,16 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
-                                        <a href="/invest_dash_controller.php">Investment Dashboard</a>
+                                        <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="#">Investment Tools</a>
                                     </li>
                                 </ul>
+                            </li>
+
+                            <li>
+                                <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
                         
                         </ul>
@@ -97,6 +103,8 @@
                                     </div>
                                 </div>
                                 <!-- /.row -->
+
+
                                         <div class="container">
                                           <h4>The following models calculate values based on information entered by the user. Interest rate is based upon the 10 year treasury rate of the USA, which is the risk free rate on the market. Actual returns may vary from models.</h4>
                                           <a href="#whatif" class="btn btn-info" data-toggle="collapse">Future Value with Single Investment</a>
@@ -120,6 +128,39 @@
                                       </form>
                                             </div>
                                         </div>
+
+
+                                        <div class="container">
+                                          <a href="#whatif1" class="btn btn-info" data-toggle="collapse">Future Value with Yearly Investment</a>
+                                          <div id="whatif1" class="collapse">
+
+                                         
+                                            <div class="padding">
+                                            </div>
+
+                                          
+
+
+                                            
+                                      <form>
+                                            <div class="form-group">
+                                              <label for="pmt">Yearly Investment:</label>
+                                              <input type="number" class="form-control" id="pmt">
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="prd">Number of Years:</label>
+                                              <input type="number" class="form-control" id="prd">
+                                            </div>
+                                            <div> 
+                                                <p>Risk Free Rate: </p>
+                                            </div>
+                                            <div>
+                                                <p>Future Value: </p>
+                                            </div>
+                                      </form>
+                                            </div>
+                                        </div>
+
 
 
                     </div>
