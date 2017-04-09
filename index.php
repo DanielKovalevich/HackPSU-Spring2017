@@ -268,7 +268,27 @@ body{ text-align: center;}
                           <div class="col1">
                             <div class="text-center">
                                 <p class="panel-title"><i class="fa fa-clock-o fa-fw"></i> <strong>Outstanding Loans</strong></p>
-                    
+                            <table class="table-condensed table-bordered">
+                                <caption class="text-center">Credit Score: 724</caption>
+                                <thead>
+                                    <tr>
+                                    <th>Amount</th>
+                                    <th>% Interest</th>
+                                    <th>Monthly</th>
+                                    <th>$ Remaining</th>
+                                    <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>1,000,000</td>
+                                    <td>$2%</td>
+                                    <td>$5</td>
+                                    <td>7,500,000</td>
+                                    <td>D. Trump
+                                    </tr>
+                                </tbody>
+                            </table>
               
                         
                    
@@ -280,9 +300,39 @@ body{ text-align: center;}
                          <div class="col2">
                             <div class="text-center">
                                 <p class="panel-title"><i class="fa fa-money fa-fw"></i> <strong>Transactions</strong></p>
-                      
-                            </div>
-                            <div class="panel-body">
+                                <table class="table-condensed table-bordered">
+                                <thead>
+                                    <tr>
+                                    <th>To/From</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>To: Veigar's Account</td>
+                                    <td>+ $100.10</td>
+                                    <td>Pending</td>
+                                    </tr>
+                                    <tr>
+                                    <td>From: Kane's Account</td>
+                                    <td>+ $204.23</td>
+                                    <td>Complete</td>
+                                    </tr>
+                                    <tr>
+                                    <td>To: Obama's Account</td>
+                                    <td>- $800.00</td>
+                                    <td>Complete</td>
+                                    </tr>
+                                    <tr>
+                                    <td>From: John Cena's Account</td>
+                                    <td>+ $0.01</td>
+                                    <td>Complete</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        
                             </div>
                         </div>
                     </div>
