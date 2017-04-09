@@ -1,3 +1,22 @@
+    <?php
+    include('php/graphs.php');
+    include('php/capitalApi.php');
+
+    $capitalApi = new capitalApi;
+
+    if(!isset($_SESSION['accounttype'])) {
+
+        $_SESSION['accounttype'] = "Credit Card";
+
+    }
+    else if(!isset($_SESSION['accountname'])) {
+
+        $_SESSION['accountname'] = "Alyson's Account";
+    }
+
+    ?>
+    
+
 <html lang="en">
 
         <head>
@@ -85,7 +104,23 @@
                             <li>
                                 <a href="atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
+
+                            <li>
+                                <a href="../transfer.php"><i class="fa fa-fw fa-desktop"></i> Transfer Funds</a>
+                            </li>
                         
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                                <ul id="users" class="collapse">
+                                    <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
+
+                                    <?php echo("<a href='supersecret.php?id=".$user['nickname'].">".$user['nickname']."</a>");
+
+                                } ?>
+
+
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

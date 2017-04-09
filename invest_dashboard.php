@@ -1,3 +1,21 @@
+    <?php
+    include('php/graphs.php');
+    include('php/capitalApi.php');
+
+    $capitalApi = new capitalApi;
+
+    if(!isset($_SESSION['accounttype'])) {
+
+        $_SESSION['accounttype'] = "Credit Card";
+
+    }
+    else if(!isset($_SESSION['accountname'])) {
+
+        $_SESSION['accountname'] = "Alyson's Account";
+    }
+
+    ?>
+    
     <html lang="en">
 
 
@@ -87,7 +105,19 @@
                             <li>
                                 <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                             </li>
-                        
+                            
+                            <li>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                                <ul id="users" class="collapse">
+                                    <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
+
+                                    <?php echo("<a href='supersecret.php?id=".$user['nickname'].">".$user['nickname']."</a>");
+
+                                } ?>
+
+
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -138,7 +168,7 @@
                                     <label for="transfer">How much would you like to transfer to your investment account:</label>
                                     <input type="number" min="0" class="form-control" id="transfer" value="value">
                                 </div>
-                                <button type="submit" class="btn btn-default" id="doEverything" onclick="decriment()">Submit</button>
+                                <button type="submit" class="btn btn-default" id="doEverything" onclick="return decriment()">Submit</button>
                             </form>
                         </div>
 
