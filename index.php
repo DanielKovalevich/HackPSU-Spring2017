@@ -13,6 +13,10 @@ include('php/graphs.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>SB Admin - Bootstrap Admin Template</title>
 
     <!-- Bootstrap Core CSS -->
@@ -25,6 +29,7 @@ include('php/graphs.php');
     <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/CustomFont.css" rel="stylesheet" type="text/css">
 
     <link href="css/DivCentering.css" rel="stylesheet" type="text/css">
@@ -117,10 +122,10 @@ include('php/graphs.php');
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="/php/invest_dash_controller.php">Investment Dashboard</a>
+                                <a href="/php/invest_dash_controller.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
                             </li>
                             <li>
-                                <a href="/invest_tools.html">Investment Tools</a>
+                                <a href="/invest_tools.html"><i class"fa fa-fw fa-gear"></i>Investment Tools</a>
                             </li>
                         </ul>
                     </li>

@@ -23,7 +23,7 @@
             <link href="../css/plugins/morris.css" rel="stylesheet">
 
             <!-- Custom Fonts -->
-            <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+            <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
             <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
             <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -74,10 +74,10 @@
                                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Pocket Change <i class="fa fa-fw fa-caret-down"></i></a>
                                 <ul id="demo" class="collapse">
                                     <li>
-                                        <a href="/invest_dash_controller.php">Investment Dashboard</a>
+                                        <a href="/invest_dash_controller.php"><i class"fa fa-fw fa-gear"></i>Investment Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="../invest_tools.html">Investment Tools</a>
+                                        <a href="../invest_tools.html"><i class"fa fa-fw fa-gear"></i>Investment Tools</a>
                                     </li>
                                 </ul>
                             </li>
@@ -91,21 +91,51 @@
                     <!-- /.navbar-collapse -->
                 </nav>
 
+                <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                               ATM Locator
+                            </h1>
+                        </div>
+                    </div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="radius">Radius:</label>
+                            <input type="number" min="0" class="form-control" id="radius">
+                        </div>
+                        <button type="submit" class="btn btn-default" id="doEverything" onclick="getLocation()">Submit</button>
+                    </form>
+
+                    <iframe
+                        width="1400"
+                        height="900"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCBtMu6YjA23pCRTSGnezyoz34kaVFatDo&q=PA" allowfullscreen>
+                    </iframe>
+                    <p id="demo">Hello</p>
             </div>
         </body>
 </html>
 
+
 <script>
 var x = document.getElementById("demo");
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
+    } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+
 function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
+    "<br>Longitude: " + position.coords.longitude;
 }
 </script>
