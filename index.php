@@ -1,11 +1,23 @@
 <?php
 include('php/graphs.php');
+include('php/capitalApi');
+
+$capitalApi = new capitalApi;
+
+if(!isset($_SESSION['accounttype'])) {
+
+    $_SESSION['accounttype'] = "Credit Card";
+
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +28,8 @@ include('php/graphs.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script data-main="lib/capital_one" src="lib/require-jquery.js"></script>
+
 
     <title>SB Admin - Bootstrap Admin Template</title>
 
@@ -76,6 +90,7 @@ include('php/graphs.php');
 
 <body>
 
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -89,7 +104,7 @@ include('php/graphs.php');
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <a href="createAccount.html"><i class="fa fa-fw fa-user"></i> Open New Account</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
@@ -133,7 +148,18 @@ include('php/graphs.php');
                     <li>
                         <a href="/php/atm.php"><i class="fa fa-fw fa-desktop"></i> ATM Locations</a>
                     </li>
-                  
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-user-circle" aria-hidden="true"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="users" class="collapse">
+
+                            <?php foreach($capitalApi->getUserAccounts() as $user) { ?>
+
+                            <li><?php echo $user['nickname'];?></li>
+                            <?php } ?>
+
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
